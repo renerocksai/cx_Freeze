@@ -1,5 +1,5 @@
 
-# This is a fork to make cx\_Freeze work on macOS for PyQt5 projects like [semantic_zk](https://github.com/renerocksai/semantic_zk)
+# This is a fork to make cx\_Freeze 5.1.1 work on macOS for PyQt5 projects like [semantic_zk](https://github.com/renerocksai/semantic_zk)
 
 
 # About cx\_Freeze
