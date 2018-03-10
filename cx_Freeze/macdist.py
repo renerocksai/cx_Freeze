@@ -162,6 +162,10 @@ class bdist_mac(Command):
                     # the referencedFile is already a relative path (to the executable)
                     continue
 
+                if referencedFile.startswith('@'):
+                    # the referencedFile is already a relative path (to the executable)
+                    continue
+
                 path, name = os.path.split(referencedFile)
 
                 #some referenced files have not previously been copied to the
@@ -171,8 +175,12 @@ class bdist_mac(Command):
                 if (name not in files and not path.startswith('/usr') and not
                         path.startswith('/System')):
                     print(referencedFile)
-                    self.copy_file(referencedFile,
-                                   os.path.join(self.binDir, name))
+                    try:
+                        self.copy_file(referencedFile,
+                                       os.path.join(self.binDir, name))
+                    except:
+                        print('RENE: error with', referencedFile)
+                        continue
                     files.append(name)
 
                 # see if we provide the referenced file;

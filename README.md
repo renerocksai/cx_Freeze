@@ -1,9 +1,16 @@
+
+# This is a fork to make cx\_Freeze work on macOS for PyQt5 projects like [semantic_zk](https://github.com/renerocksai/semantic_zk)
+
+
 # About cx\_Freeze
 
 **cx\_Freeze** is a set of scripts and modules for freezing Python scripts into
 executables, in much the same way that [py2exe](http://www.py2exe.org/) and
 [py2app](https://pythonhosted.org/py2app/) do. Unlike these two tools,
-cx\_Freeze is cross platform and should work on any platform that Python itself works on. It supports [Python](https://www.python.org/) 2.7, 3.5 and 3.6.
+cx\_Freeze is cross platform and should work on any platform that Python itself works on. It supports [Python](https://www.python.org/) 3.5 or higher.
+
+If you need support for Python 2.x, cx\_Freeze version 5 should be used
+instead.
 
 # Download/Install
 
